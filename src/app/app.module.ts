@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CharactersComponent } from './components/characters/characters.component';
 import { EpisodesComponent } from './components/episodes/episodes.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { QuotesComponent } from './components/quotes/quotes.component';
     CharactersComponent,
     EpisodesComponent,
     QuotesComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
