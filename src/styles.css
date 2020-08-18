@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+#main
+{
+  height: 100%;
+  margin: 0;
+
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  /* Full height */
+  height: 100%;
+  background-image: url("/assets/images/download.jpg");
+  /* Center and scale the image nicely */
+  background-repeat: repeat-y;
+  background-size: cover;
+}
