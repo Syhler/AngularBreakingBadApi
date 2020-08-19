@@ -1,0 +1,49 @@
+<div class="card middle">
+  <div class="front">
+    <img src="{{character.img}}" alt="">
+  </div>
+  <div class="back">
+    <div class="back-content middle">
+      <h2>{{character.name}}</h2>
+
+      <!-- Fact side -->
+      <div *ngIf="showCharacterFacts">
+        <span>Facts</span>
+        <ul class="list-group list-group-flush" >
+          <li class="list-group-item"><b><em>Nickname:</em></b> {{character.nickname}}</li>
+          <li class="list-group-item"><b><em>Birthday:</em></b> {{character.birthday}}</li>
+          <li class="list-group-item"><b><em>Actor:</em></b> {{character.portrayed}}</li>
+          <li class="list-group-item"><b><em>Status:</em></b> {{character.status}}</li>
+          <li class="list-group-item" *ngFor="let occupation of character.occupation"><b><em>Occupation:</em></b> {{occupation}} </li>
+          <li class="list-group-item"><b><em>Seasons been in: </em></b><span *ngFor="let season of character.appearance">{{season}}
+            , </span></li>
+          <li class="list-group-item"><b><em>Death Count:</em></b> {{character.deathCount}}</li>
+
+          <li class="list-group-item" *ngIf="character.status !== 'Alive'">
+            <button class="btn btn-danger" (click)="onDeathClick()">Death Reason</button>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- Death side -->
+      <div *ngIf="showDeathFact">
+        <span>Death Facts</span>
+        <ul class="list-group list-group-flush" *ngIf="deathReason != undefined">
+          <li class="list-group-item"><b><em>Cause:</em></b> {{deathReason.cause}}</li>
+          <li class="list-group-item"><b><em>Responsible:</em></b> {{deathReason.responsible}}</li>
+          <li class="list-group-item"><b><em>Last Words:</em></b> {{deathReason.last_words}}</li>
+          <li class="list-group-item"><b><em>Died in Season:</em></b> {{deathReason.season}} <b>Episode:</b> {{deathReason.episode}}</li>
+          <li class="list-group-item">
+            <button class="btn btn-warning" (click)="onGoBackClick()">Go Back</button>
+          </li>
+        </ul>
+        <ul class="list-group list-group-flush" *ngIf="deathReason == undefined">
+          <li class="list-group-item"><h3>Couldn't find any information about this person(s) death(s)</h3></li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+</div>

@@ -11,5 +11,6 @@ export class Character
   appearance: number[];
   nickname: string;
   portrayed: string;
+  deathCount: number;
 }
 
