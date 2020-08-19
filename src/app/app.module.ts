@@ -11,6 +11,7 @@ import { CharactersComponent } from './components/characters/characters.componen
 import { EpisodesComponent } from './components/episodes/episodes.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FlipCardComponent } from './components/flip-card/flip-card.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     EpisodesComponent,
     QuotesComponent,
     DashboardComponent,
+    FlipCardComponent,
   ],
   imports: [
     BrowserModule,

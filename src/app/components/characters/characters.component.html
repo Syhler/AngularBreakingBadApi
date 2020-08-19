@@ -1,1 +1,11 @@
-<p>characters works!</p>
+<div class="container ">
+
+
+    <div class="row mt-5" *ngFor="let row of characters index as i">
+
+    <div class="col-sm" *ngFor="let column of row index as j">
+      <app-flip-card  [character]="column"></app-flip-card>
+    </div>
+  </div>
+
+</div>
