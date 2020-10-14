@@ -1,1 +1,25 @@
-<p>episodes works!</p>
+<div class="container mt-5 text-white">
+
+  <h1 class="text-center">{{this.title}}</h1>
+  <div *ngFor="let season of seasons index as i" class="mt-5">
+    <h1 class="text-center">Season {{i + 1}}</h1>
+    <table class="table table-striped table-dark table-bordered mt-4">
+      <thead class="thead-light">
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Episode</th>
+        <th scope="col">Air date</th>
+        <th scope="col">Number of characters</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let episode of season index as i" >
+        <td>{{episode.title}}</td>
+        <td>{{episode.episode}}</td>
+        <td>{{episode.air_date}}</td>
+        <td>{{episode.characters.length}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

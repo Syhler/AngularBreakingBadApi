@@ -1,11 +1,21 @@
 <div class="container ">
 
-
-    <div class="row mt-5" *ngFor="let row of characters index as i">
-
-    <div class="col-sm" *ngFor="let column of row index as j">
-      <app-flip-card  [character]="column"></app-flip-card>
+  <div class="input-group mb-3 mt-5">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Series</label>
     </div>
+    <select class="custom-select" id="inputGroupSelect01" (change)="onSelect($event.target.value)">
+      <option value="All" selected>All</option>
+      <option value="BreakingBad">Breaking bad</option>
+      <option value="BetterCallSaul">Better Call Saul</option>
+    </select>
   </div>
 
+  <div>
+    <div class="row mt-5" *ngFor="let row of characters index as i">
+      <div class="col-sm" *ngFor="let column of row index as j">
+        <app-flip-card [character]="column"></app-flip-card>
+      </div>
+    </div>
+  </div>
 </div>

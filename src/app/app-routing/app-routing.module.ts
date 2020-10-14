@@ -22,8 +22,8 @@ const routes: Routes = [
     component: QuotesComponent
   },
   {
-    path: "episodes",
-    component: EpisodesComponent
+    path: "episodes/:series",
+    component: EpisodesComponent,
   }
 ];
 

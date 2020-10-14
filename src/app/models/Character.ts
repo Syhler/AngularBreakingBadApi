@@ -12,5 +12,6 @@ export class Character
   nickname: string;
   portrayed: string;
   deathCount: number;
+  category: string;
 }
 
